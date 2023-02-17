@@ -1,0 +1,20 @@
+include ':app'
+
+include ':foreorder-library-android'
+project(':foreorder-library-android').projectDir = new File('Libraries/foreorder-library-android/app')
+include ':jsonparsercallback'
+project(':jsonparsercallback').projectDir = new File('Libraries/JsonParserCallback/app')
+include ':activityanimatorutility'
+project(':activityanimatorutility').projectDir = new File('Libraries/ActivityAnimatorUtility/app')
+include ':generalutilities'
+project(':generalutilities').projectDir = new File('Libraries/GeneralUtilities/app')
+include ':locationutilities'
+project(':locationutilities').projectDir = new File('Libraries/LocationUtilities/app')
+include ':imageutility'
+project(':imageutility').projectDir = new File('Libraries/ImageUtility/app')
+include ':permissionutilities'
+project(':permissionutilities').projectDir = new File('Libraries/PermissionUtilities/app')
+include ':realmutilities'
+project(':realmutilities').projectDir = new File('Libraries/RealmUtilities/app')
+include ':nointernetview'
+project(':nointernetview').projectDir = new File('Libraries/NoInternetView/app')

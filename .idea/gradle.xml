@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Libraries/ActivityAnimatorUtility/app" />
+            <option value="$PROJECT_DIR$/Libraries/GeneralUtilities/app" />
+            <option value="$PROJECT_DIR$/Libraries/ImageUtility/app" />
+            <option value="$PROJECT_DIR$/Libraries/JsonParserCallback/app" />
+            <option value="$PROJECT_DIR$/Libraries/LocationUtilities/app" />
+            <option value="$PROJECT_DIR$/Libraries/NoInternetView/app" />
+            <option value="$PROJECT_DIR$/Libraries/PermissionUtilities/app" />
+            <option value="$PROJECT_DIR$/Libraries/RealmUtilities/app" />
+            <option value="$PROJECT_DIR$/Libraries/foreorder-library-android/app" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ForeOrder Employee</string>
+    <string name="file_provider_authority">com.foreorder_employee_android.fileprovider</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="question_mark">\?</string>
+    <string name="login">Login</string>
+
+    <string name="order_queue">Order Queue</string>
+
+    <string name="item">item</string>
+    <string name="items">items</string>
+
+</resources>

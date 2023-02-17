@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fore_order_blue"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.rhinoactive.nointernetview.NoInternetView
+                android:id="@+id/no_internet_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize">
+
+                <ImageButton
+                    android:id="@+id/menu_button_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/icon_arow_left_wht"
+                    android:padding="17dp" />
+
+                <LinearLayout
+                    android:id="@+id/llayout_menu_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="17dp"
+                    android:layout_toRightOf="@id/menu_button_left">
+
+                    <TextView
+                        android:id="@+id/textview_toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingRight="18dp"
+                        android:paddingTop="16dp"
+                        android:scrollHorizontally="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/white"
+                        android:gravity="left"
+                        android:textSize="20dp"
+                        android:text="Loading Menus..." />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageview_title_carrot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/llayout_menu_name"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    app:srcCompat="@drawable/select_caret_down_wht"
+                    android:visibility="gone"/>
+
+                <ImageButton
+                    android:id="@+id/menu_button_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/icon_call_wht"
+                    android:padding="17dp"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>

@@ -1,0 +1,23 @@
+{
+  "Version": "1.0",
+  "CredentialsProvider": {
+    "CognitoIdentity": {
+      "Default": {
+        "PoolId": "ap-south-1_xNBhXMC9k",
+        "Region": "ap-south-1"
+      }
+    }
+  },
+  "IdentityManager" : {
+    "Default" : {
+
+    }
+  },
+  "S3TransferUtility": {
+    "Default": {
+
+      "Bucket": "forefront-userfiles-mobilehub-qa",
+      "Region": "ap-southeast-1"
+    }
+  }
+}

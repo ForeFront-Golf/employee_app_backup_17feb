@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\techp\\OneDrive\\Desktop\\Archana\\foreorder-employee-android-master\\foreorder-employee-android-master\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-en-rNZ\\values-en-rNZ.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\techp\\.gradle\\caches\\transforms-3\\35e7b7fb59e4a5c58134fde8954fd703\\transformed\\jetified-android.joda-2.10.2\\res\\values-en-rNZ\\values-en-rNZ.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}

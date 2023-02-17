@@ -1,0 +1,94 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 32
+    buildToolsVersion "33"
+    defaultConfig {
+        applicationId "com.rhinoactive.foreorder_golf_employee_forefront"
+        minSdkVersion 21
+        targetSdkVersion 32
+        versionCode 9
+        versionName "1.2.5"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+        resValue "string", "google_maps_key", (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
+
+        //TODO:
+        manifestPlaceholders = [onesignal_app_id: "55a3f65e-97bf-4bc4-afd3-d4c03d1da17a",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "REMOTE"]
+    }
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    ndkVersion '21.0.6113669'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    configurations {
+        cleanedAnnotations
+        compile.exclude group: 'org.jetbrains' , module:'annotations'
+    }
+//    android.buildTypes.release.ndk.debugSymbolLevel = { SYMBOL_TABLE | FULL }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation project(':foreorder-library-android')
+    implementation project(':jsonparsercallback')
+    implementation project(':activityanimatorutility')
+    implementation project(':generalutilities')
+    implementation project(':locationutilities')
+    implementation project(':imageutility')
+    implementation project(':permissionutilities')
+    implementation project(':realmutilities')
+    implementation project(':nointernetview')
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+//    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
+//    implementation 'com.onesignal:OneSignal:3.8.1'
+    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+    implementation 'com.afollestad:sectioned-recyclerview:0.2.3'
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+//    compileOnly 'org.projectlombok:lombok:1.18.24'
+//    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'net.danlew:android.joda:2.10.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+//    implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
+}

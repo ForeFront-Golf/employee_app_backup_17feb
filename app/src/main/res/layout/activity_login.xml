@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/background_primary" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="132dp"
+        app:srcCompat="@drawable/foreorder_logo_wht_lrg" />
+
+    <com.rhinoactive.nointernetview.NoInternetView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/llayout_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/fore_order_blue"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/email_username_login"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginTop="22dp"
+            android:backgroundTint="@color/white_percent_50"
+            android:color="@color/white_percent_50"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="11dp"
+            android:textColor="@color/white_percent_50"
+            android:textColorHint="@color/white_percent_50"
+            android:textSize="13dp" />
+
+        <EditText
+            android:id="@+id/edittext_password_login"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/white_percent_50"
+            android:color="@color/white_percent_50"
+            android:fontFamily="sans-serif"
+            android:hint="@string/password"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:padding="11dp"
+            android:textColor="@color/white_percent_50"
+            android:textColorHint="@color/white_percent_50"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/button_login"
+            fontPath="fonts/Montserrat_Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginRight="34dp"
+            android:layout_marginTop="23dp"
+            android:background="@color/white"
+            android:onClick="login"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/fore_order_blue"
+            android:textSize="15dp"
+            tools:ignore="MissingPrefix" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/textview_legal_doc_links"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="@string/terms_and_privacy_policy_login"
+                android:textColor="@color/white_percent_50"
+                android:textSize="10dp" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@color/fore_order_blue">
+
+                <TextView
+                    android:id="@+id/textview_terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#d4e8f6"
+                    android:textSize="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/terms_of_use"/>
+
+                <TextView
+                    android:id="@+id/txt_and"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white_percent_50"
+                    android:textSize="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="\tand\t"/>
+
+
+                <TextView
+                    android:id="@+id/textview_privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textColor="#d4e8f6"
+                    android:textSize="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/privacy_policy"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
